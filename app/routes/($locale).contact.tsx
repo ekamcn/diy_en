@@ -51,7 +51,7 @@ export default function ContactPage() {
                                 rel="noopener noreferrer"
                                 className="underline underline-offset-2"
                             >
-                                {import.meta.env.VITE_STORE_NAME}.com
+                                {import.meta.env.VITE_DOMAIN_NAME}
                             </a>
                         </span>
                         <span>Opening Hours: Monday to Friday - 9:00 AM to 5:00 PM</span>

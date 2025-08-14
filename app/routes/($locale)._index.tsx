@@ -28,13 +28,11 @@ const sections = [
             <p>
               If you don’t find the answer to your question, feel free to email
               us at{' '}
-              <a
-                href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL || 'Email Not Set'}`}
+              <a href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`} 
                 className=" hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL || 'Email Not Set'}
               </a>
-              "
             </p>
           </div>
         ),
@@ -142,15 +140,15 @@ export default function Homepage() {
         title="Cosy Critters "
         imageUrl={import.meta.env.VITE_BANNER}
         mobileImageUrl={import.meta.env.VITE_MOBILE_BANNER}
-        subtitle="At Cosy Critters, every pet is more than just a companion — they're family."
-        description="That’s why we created a boutique entirely dedicated to their comfort, happiness, and everyday well-being. Our mission is to bring you high-quality, practical, soft, and irresistibly cute products to pamper your loyal companion just the way they deserve."
+        subtitle="Welcome to Garden Handy, your go-to destination for smart, affordable, and inspiring DIY solutions."
+        description="Founded by a team of passionate makers, our mission is simple: to help you build, improve, and personalize your space — with quality tools, great value, and guidance every step of the way."
         buttonText="Shop Now"
         buttonUrl=""
       />
 
       <CollectionByHandle
         handle="offre-flash"
-        title="offer flash"
+        // title="offer flash"
         limit={6}
         columnSize="6"
         badgeText="Flash Sale"
@@ -162,10 +160,11 @@ export default function Homepage() {
 
       <CollectionByHandle
         handle="derniere-chance"
-        title="derniere chance"
+        // title="derniere chance"
         limit={20}
         columnSize="4"
         badgeText="Last Chance"
+        badgeIcon={true}
         showTitle={true}
         showDescription={false}
         className="featured-collection"
@@ -177,7 +176,7 @@ export default function Homepage() {
 
       <CollectionByHandle
         handle="tout-a-moins-de-20"
-        title="tout a moins de 20"
+        // title="tout a moins de 20"
         limit={20}
         columnSize="5"
         showTitle={true}

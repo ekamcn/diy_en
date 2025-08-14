@@ -1,5 +1,5 @@
 import { Image } from '@shopify/hydrogen';
-
+ 
 interface ImageBannerProps {
     title?: string;
     subtitle?: string;
@@ -10,12 +10,12 @@ interface ImageBannerProps {
     buttonUrl?: string;
     className?: string;
 }
-
+ 
 // Main banner component
 export function ImageBanner({
     title = 'Cosy Critters ',
-    subtitle = "At Cosy Critters, every pet is more than just a companion — they're family.",
-    description = 'That’s why we created a boutique entirely dedicated to their comfort, happiness, and everyday well-being. Our mission is to bring you high-quality, practical, soft, and irresistibly cute products to pamper your loyal companion just the way they deserve.',
+    subtitle = "Welcome to {import.meta.env.VITE_STORE_NAME}, a proudly American brand committed to transforming your home with style, quality, and unbeatable value.",
+    description = 'Founded by a team of passionate home decor enthusiasts, our mission is simple: to make your living space more beautiful, more functional, and above all — more accessible for everyone.',
     imageUrl = '',
     mobileImageUrl = '',
     buttonText = 'Shop Now',
@@ -45,7 +45,7 @@ export function ImageBanner({
                                 />
                             </div>
                         )}
-
+ 
                         {/* Mobile Image */}
                         <div className="block sm:hidden w-full h-full">
                             <Image
@@ -73,21 +73,21 @@ export function ImageBanner({
                     </div>
                 )}
             </div>
-
+ 
             {/* Content Section - Below Image */}
             <div className="bg-[var(--color-2)] text-white py-2 sm:py-1 lg:py-6 xl:py-8">
-                <div className="px-4 sm:px-6 lg:px-8">
+                <div className="px-2 lg:px-8">
                     <div className="w-full text-center flex flex-col items-center justify-center">
                         <div className="max-w-screen mx-auto">
                             {/* Description */}
-                            <p className="text-sm sm:text-base lg:text-lg text-stone-200 mb-8 sm:mb-10 lg:mb-12 leading-relaxed max-w-6xl mx-auto">
-                                <strong> {subtitle}</strong>
+                            <p className="!text-sm lg:!text-base text-white !leading-7 max-w-7xl  !py-3">
+                                <strong> {subtitle}</strong> {description}
                                 <br />
                             </p>
-                            <p className="!mt-4 text-sm sm:text-base lg:text-lg text-stone-200 mb-8 sm:mb-10 lg:mb-12 leading-relaxed max-w-6xl mx-auto">
+                            {/* <p className="!mt-4 text-sm sm:text-base lg:text-lg text-white leading-relaxed max-w-6xl mx-auto">
                                 {description}
-                            </p>
-
+                            </p> */}
+ 
                             {/* Call to Action Button
                             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                                 <a
@@ -110,11 +110,11 @@ export function ImageBanner({
         </div>
     );
 }
-
+ 
 // Alternative banner with more layout options
 export function ImageBannerVariant({
     title = 'Cosy Critters s',
-    subtitle = 'Welcome to Cosy Critters , a proudly American brand committed to transforming your home with style, quality, and unbeatable value.',
+    subtitle = 'Welcome to {import.meta.env.VITE_STORE_NAME}, a proudly American brand committed to transforming your home with style, quality, and unbeatable value.',
     description = 'Founded by a team of passionate home decor enthusiasts, our mission is simple: to make your living space more beautiful, more functional, and above all — more accessible for everyone.',
     imageUrl = '',
     buttonText = 'Shop Now',
@@ -131,14 +131,14 @@ export function ImageBannerVariant({
         theme === 'dark'
             ? 'bg-[--color-2] text-stone-900 hover:bg-stone-100'
             : 'bg-[--color-2] text-white hover:bg-stone-800';
-
+ 
     const layoutStyles = {
         bottom: 'justify-end items-start',
         center: 'justify-center items-center text-center',
         left: 'justify-center items-start',
         right: 'justify-center items-end',
     };
-
+ 
     return (
         <div className={`relative w-full min-h-screen ${className}`}>
             {/* Background */}
@@ -179,7 +179,7 @@ export function ImageBannerVariant({
                     </div>
                 )}
             </div>
-
+ 
             {/* Content */}
             <div
                 className={`relative flex flex-col min-h-screen ${layoutStyles[layout]}`}
@@ -217,6 +217,8 @@ export function ImageBannerVariant({
         </div>
     );
 }
-
+ 
 export default ImageBanner;
-
+ 
+ 
+ 

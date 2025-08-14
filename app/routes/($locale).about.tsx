@@ -29,7 +29,7 @@ export default function AboutPage() {
               deal.
             </p>
             <p className="text-gray-700">
-              From day one, we've focused on delivering an exceptional customer
+              From day one, we We&apos;ve focused on delivering an exceptional customer
               experience—through a smooth online shopping journey, fast
               delivery, and responsive support.
             </p>
@@ -113,8 +113,8 @@ export default function AboutPage() {
           </h2>
           <div className="flex flex-col gap-5">
             <p className="text-gray-700">
-              At Cosy Critters, we’re not just another home décor store—we're
-              your partner in making your house feel like home. We’re committed
+              At Cosy Critters, we&apos;re not just another home décor store—we&apos;re
+              your partner in making your house feel like home. We&apos;re committed
               to offering a unique shopping experience, personalized support,
               and top-quality products that respect your budget.
             </p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
           <h2 className="!text-2xl font-semibold text-[#2c3e50]">Join Us!</h2>
           <p className="text-gray-700">
             Explore our website and find thousands of products to transform your
-            home. Whether you're looking for furniture, accessories, or
+            home. Whether you We&apos;re looking for furniture, accessories, or
             textiles, <strong>Cosy Critters</strong> is here to help you bring
             your vision to life.
           </p>
@@ -200,7 +200,7 @@ export default function AboutPage() {
             <span>
               <strong>Website: </strong>
               <a
-                href="https://happyssnouts.com"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
