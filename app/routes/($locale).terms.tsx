@@ -4,12 +4,11 @@ export default function TermsServicesPage() {
     return (
         <div className="bg-white min-h-screen py-8 sm:py-12 px-5 sm:px-5 [&_ul]:-indent-[1.3em]">
             <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-8 lg:gap-10 tracking-wider">
-                <p className='!text-2xl sm:!text-3xl font-bold'>Terms and Condition</p>
-                <p className="!text-2xl sm:!text-3xl lg:!text-3xl font-bold">Terms of Services</p>
+                <p className="!text-2xl sm:!text-3xl lg:!text-3xl font-bold">Terms of Service</p>
                 <div>
                     <h2 className="!text-xl sm:!text-2xl font-semibold mt-4 sm:mt-6">Who We Are</h2>
                     <p className='leading-6 sm:leading-7 !text-sm sm:!text-base'>
-                        {import.meta.env.VITE_COMPANY_NAME} (<span>&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;</span>) operates the website {import.meta.env.VITE_DOMAIN_NAME}/ (the <span>&quot;Site&quot;</span>). We are dedicated to providing high-quality e-commerce products and services. This document outlines the terms and conditions governing your use of our Site.
+                        {import.meta.env.VITE_COMPANY_NAME} (<span>&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;</span>) operates the website {import.meta.env.VITE_DOMAIN_NAME} (the <span>&quot;Site&quot;</span>). We are dedicated to providing high-quality e-commerce products and services. This document outlines the terms and conditions governing your use of our Site.
                     </p>
                 </div>
                 <div>
@@ -45,7 +44,7 @@ export default function TermsServicesPage() {
                         <li>
                             <strong>Third-party service:</strong> Refers to advertisers, contest sponsors, promotional and marketing partners, and others who provide our content or whose products or services we think may interest you.
                         </li>
-                        <li>Website: {import.meta.env.VITE_COMPANY_NAME}&apos;s site, which can be accessed via this URL: {import.meta.env.VITE_DOMAIN_NAME}/.</li>
+                        <li>Website: {import.meta.env.VITE_COMPANY_NAME}&apos;s site, which can be accessed via this URL: {import.meta.env.VITE_DOMAIN_NAME}.</li>
                         <li>You: A person or entity that is registered with {import.meta.env.VITE_COMPANY_NAME} to use the Services.</li>
                     </ul>
                 </div>
@@ -97,7 +96,7 @@ export default function TermsServicesPage() {
 
                 <div>
                     <h2 className="!text-xl sm:!text-2xl font-semibold">Return and Refund Policy</h2>
-                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base'>If you are not satisfied with your purchase, please contact us via {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL} within 14 days for returns or exchanges. Products must be returned in original condition and packaging.</p>
+                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base'>If you are not satisfied with your purchase, please contact us via {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL} within 30 days for returns or exchanges. Products must be returned in original condition and packaging. Refunds will be processed within 5 business days after we receive and inspect the returned item.</p>
                 </div>
                 <div>
                     <h2 className="!text-xl sm:!text-2xl font-semibold">Limitation of Liability</h2>
@@ -147,12 +146,12 @@ export default function TermsServicesPage() {
                         <span>
                             Phone: <a href={`tel:${import.meta.env.VITE_CUSTOMER_SERVICE_PHONE}`} className="underline underline-offset-4">{import.meta.env.VITE_CUSTOMER_SERVICE_PHONE}</a>
                         </span>
-                        <span className="break-words"> Address: {import.meta.env.VITE_COMPANY_ADDRESS}, USA</span>
+                        <span className="break-words"> Address: {import.meta.env.VITE_COMPANY_ADDRESS}</span>
                         <span>
                             Website: <a href={import.meta.env.VITE_DOMAIN_NAME} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{import.meta.env.VITE_DOMAIN_NAME}</a>
                         </span>
                         <span className='pt-4'>
-                            Last Updated: 1-7-2025
+                            Last Updated: 16-7-2025
                         </span>
                     </p>
                 </div>

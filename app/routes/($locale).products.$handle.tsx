@@ -50,6 +50,7 @@ const sections = [
         ),
       },
       {
+        
         question: 'What is your return policy?',
         answer: (
           <div className="flex flex-col gap-4">
@@ -96,7 +97,7 @@ const sections = [
               emailing us at{' '}
               <a
                 href="mailto:{import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}"
-                className=" hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className=" hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>
@@ -240,13 +241,20 @@ function FeatureItem({
 }) {
   return (
     <div className="flex items-center gap-3 sm:gap-2 w-full">
-      <img
-        src={icon}
-        alt={title}
-        className="w-10 h-10 sm:w-8 sm:h-8 object-contain flex-shrink-0"
+<span
+        className="w-8 h-8 inline-block"
+        role="img"
+        aria-label={title}
         style={{
-          filter:
-            'invert(62%) sepia(16%) saturate(431%) hue-rotate(345deg) brightness(91%) contrast(88%)',
+          backgroundColor: 'var(--color-1)',
+          WebkitMaskImage: `url(${icon})`,
+          maskImage: `url(${icon})`,
+          WebkitMaskRepeat: 'no-repeat',
+          maskRepeat: 'no-repeat',
+          WebkitMaskSize: 'contain',
+          maskSize: 'contain',
+          WebkitMaskPosition: 'center',
+          maskPosition: 'center',
         }}
       />
       <div className="flex flex-col w-full">
@@ -339,7 +347,7 @@ export default function Product() {
           <h1 className="text-3xl font-bold mb-2">{title}</h1>
 
           <p className="!pb-8 text-base">
-            <strong>{import.meta.env.VITE_STORE_NAME} 🇺🇸: </strong>The American Brand That Helps You Save
+            <strong>{import.meta.env.VITE_STORE_TITLE} 🇺🇸: </strong>The American Brand That Helps You Save
             BIG with Unbeatable Prices!
           </p>
           {/* Price, Date, Info */}
@@ -500,7 +508,7 @@ export default function Product() {
                 </a>
                 <br />
                 <a
-                  href={`${import.meta.env.VITE_CUSTOMER_SERVICE_PHONE}`}
+                  href={`tel:${import.meta.env.VITE_CUSTOMER_SERVICE_PHONE}`}
                   className=" hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
                 >
                   {import.meta.env.VITE_CUSTOMER_SERVICE_PHONE}{' '}

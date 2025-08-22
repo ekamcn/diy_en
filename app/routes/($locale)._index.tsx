@@ -28,8 +28,9 @@ const sections = [
             <p>
               If you don’t find the answer to your question, feel free to email
               us at{' '}
+              
               <a href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`} 
-                className=" hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className=" hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL || 'Email Not Set'}
               </a>
@@ -137,10 +138,10 @@ export default function Homepage() {
   return (
     <div className="home">
       <ImageBanner
-        title="Cosy Critters "
+        title={import.meta.env.VITE_STORE_TITLE}
         imageUrl={import.meta.env.VITE_BANNER}
         mobileImageUrl={import.meta.env.VITE_MOBILE_BANNER}
-        subtitle="Welcome to Garden Handy, your go-to destination for smart, affordable, and inspiring DIY solutions."
+        subtitle={`Welcome to ${import.meta.env.VITE_STORE_TITLE}, your go-to destination for smart, affordable, and inspiring DIY solutions.`}
         description="Founded by a team of passionate makers, our mission is simple: to help you build, improve, and personalize your space — with quality tools, great value, and guidance every step of the way."
         buttonText="Shop Now"
         buttonUrl=""

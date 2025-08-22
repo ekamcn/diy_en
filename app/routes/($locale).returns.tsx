@@ -7,7 +7,7 @@ export default function ReturnPolicyPage() {
                 <p className='!text-2xl sm:!text-3xl font-bold'>Return Policy</p>
                     <p className="!text-2xl sm:!text-3xl lg:!text-3xl font-bold">{import.meta.env.VITE_COMPANY_NAME} Return and Refund Policy</p>
                 <div>
-                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base !pb-4'>Last Updated: 1-7-2025</p>
+                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base !pb-4'>Last Updated: 16-7-2025</p>
                     <p className='leading-6 sm:leading-7 !text-sm sm:!text-base'>Thank you for shopping with us at {import.meta.env.VITE_COMPANY_NAME}. Our Return and Refund Policy aims to ensure a smooth and transparent experience. Please review the guidelines below for eligibility, processes, and timelines for returns, refunds, and exchanges.</p>
                 </div>
                 <div>

@@ -13,8 +13,8 @@ interface ImageBannerProps {
  
 // Main banner component
 export function ImageBanner({
-    title = 'Cosy Critters ',
-    subtitle = "Welcome to {import.meta.env.VITE_STORE_NAME}, a proudly American brand committed to transforming your home with style, quality, and unbeatable value.",
+    title = `${import.meta.env.VITE_STORE_TITLE} `,
+    subtitle = `Welcome to ${import.meta.env.VITE_STORE_TITLE}, a proudly American brand committed to transforming your home with style, quality, and unbeatable value.`,
     description = 'Founded by a team of passionate home decor enthusiasts, our mission is simple: to make your living space more beautiful, more functional, and above all — more accessible for everyone.',
     imageUrl = '',
     mobileImageUrl = '',
@@ -113,8 +113,8 @@ export function ImageBanner({
  
 // Alternative banner with more layout options
 export function ImageBannerVariant({
-    title = 'Cosy Critters s',
-    subtitle = 'Welcome to {import.meta.env.VITE_STORE_NAME}, a proudly American brand committed to transforming your home with style, quality, and unbeatable value.',
+    title = `${import.meta.env.VITE_STORE_TITLE}`,
+    subtitle = `Welcome to ${import.meta.env.VITE_STORE_TITLE}, a proudly American brand committed to transforming your home with style, quality, and unbeatable value.`,
     description = 'Founded by a team of passionate home decor enthusiasts, our mission is simple: to make your living space more beautiful, more functional, and above all — more accessible for everyone.',
     imageUrl = '',
     buttonText = 'Shop Now',

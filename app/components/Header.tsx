@@ -80,23 +80,59 @@ export function Header({
   return (
     <>
       {/* Top Marquee Bar */}
-      <header className="sticky top-0 z-2 w-full bg-white shadow-md">
-
       <div className="w-full bg-[var(--color-1)] overflow-hidden whitespace-nowrap text-xs">
-        <div className="animate-marquee flex gap-136 px-6 py-2 !font-normal text-black !text-xs tracking-widest">
-          <span>Fast Shipping: 2–4 Days</span>
-          <span>
-            {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL || 'Email Not Set'}
-          </span>
-          <span>US-Based Customer Support 🇺🇸</span>
-          <span>Fast Shipping: 2–4 Days</span>
-          <span>
-            {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL || 'Email Not Set'}
-          </span>
-          <span>US-Based Customer Support 🇺🇸</span>
+        <div className="relative flex md:gap-16 lg:gap-0 gap-10">
+          {/* Marquee Content (duplicated for seamless loop) */}
+          <div className="marquee-content flex gap-14 md:gap-20 lg:min-w-full max-w-max justify-between md:justify-around">
+            <p className="px-2 md:px-4 !py-2 font-normal text-black tracking-widest !text-xs">
+              {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
+            </p>
+            <p className="px-2 md:px-4 !py-2 font-normal text-black tracking-widest !text-xs">
+            US-Based Customer Support 🇺🇸
+            </p>
+            <p className="px-2 md:px-4 !py-2 font-normal text-black tracking-widest !text-xs">
+            Fast Shipping: 2–4 Days
+            </p>
+          </div>
+          <div
+            className="marquee-content flex gap-14 md:gap-20 lg:min-w-full max-w-max justify-between md:justify-around"
+            aria-hidden="true"
+          >
+            <p className="px-2 md:px-4 !py-2 font-normal text-black tracking-widest !text-xs">
+            {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
+            </p>
+            <p className="px-2 md:px-4 !py-2 font-normal text-black tracking-widest !text-xs">
+            US-Based Customer Support 🇺🇸
+            </p>
+            <p className="px-2 md:px-4 !py-2 font-normal text-black tracking-widest !text-xs">
+            Fast Shipping: 2–4 Days
+            </p>
+          </div>
+          <style>{`
+            .marquee-content {
+              animation: marquee-scroll 95s linear infinite;
+            }
+            .w-full:hover .marquee-content {
+              animation-play-state: paused;
+            }
+            @keyframes marquee-scroll {
+              0% {
+                transform: translateX(0%);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+            @media (max-width: 768px) {
+              .marquee-content {
+                animation-duration: 70s;
+              }
+            }
+          `}</style>
         </div>
       </div>
       {/* Main Header */}
+      <header className="sticky top-0 z-2 w-full bg-white shadow-md">
       <div className="px-4 md:px-8 lg:px-20 max-w-screen-2xl mx-auto flex items-center justify-between py-4 relative">
       {/* Left: Mobile Menu Toggle */}
           <div className="flex items-center lg:hidden">
@@ -139,26 +175,7 @@ export function Header({
         </div>
       </header>
       <CollectionsAside />
-      {/* Marquee Animation Style */}
-      <style>{`
-    .animate-marquee {
-      display: flex;
-      animation: marquee 200s linear infinite;
-    }
-    /* Pause animation on hover */
-    .animate-marquee:hover {
-      animation-play-state: paused;
-    }
-
-    @keyframes marquee {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-  `}</style>
+      
     </>
   );
 }
@@ -166,15 +183,17 @@ export function Header({
 // Transform menu object to the desired structure
 function transformMenuToHTML(menu: any, collections: any, currentTheme: string) {
   // Get collections data from the query
+    const excludedHandles = ["derniere-chance", "tout-a-moins-de-20", "offre-flash"];
   const collectionsData =
     collections?.edges
       ?.filter((edge: any) => {
         const values = edge.node.metafield?.value
-          ?.split(",")                // split into array
-          .map((v: string) => v.trim()); // remove extra spaces
+          ?.split(",")
+          .map((v: string) => v.trim());
  
         return values?.includes(currentTheme);
       })
+      ?.filter((edge: any) => !excludedHandles.includes(edge.node.handle)) // exclude unwanted
       ?.map((edge: any) => ({
         id: edge.node.handle,
         href: `/collections/${edge.node.handle}`,
@@ -424,7 +443,7 @@ export function HeaderMenu({
                       </summary>
                       <ul
                         id={`HeaderMenu-MenuList-${item.id}`}
-                        className="header__submenu color-scheme-1 gradient gradient first-header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup"
+                      className="header__submenu color-scheme-1 gradient gradient first-header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup !overflow-y-auto !max-h-[410px]"
                         tabIndex={-1}
                       >
                         {item.submenu?.map(
@@ -686,15 +705,17 @@ function CollectionsAside() {
   const [collections, setCollections] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const currentTheme = import.meta.env.VITE_STORE_NAME;
+      const excludedHandles = ["derniere-chance", "tout-a-moins-de-20", "offre-flash"];
   const collectionsData =
     collections?.edges
       ?.filter((edge: any) => {
         const values = edge.node.metafield?.value
-          ?.split(",")                // split into array
-          .map((v: string) => v.trim()); // remove extra spaces
+          ?.split(",")
+          .map((v: string) => v.trim());
  
         return values?.includes(currentTheme);
       })
+      ?.filter((edge: any) => !excludedHandles.includes(edge.node.handle)) // exclude unwanted
       ?.map((edge: any) => ({
         id: edge.node.handle,
         href: `/collections/${edge.node.handle}`,

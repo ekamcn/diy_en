@@ -4,15 +4,14 @@ export default function PrivacyPolicyPage() {
     return (
         <div className="bg-white min-h-screen py-8 sm:py-12 px-4 sm:px-5 [&_ul]:-indent-[1.3em]">
             <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-8 lg:gap-10 tracking-wider">
-                <p className='!text-2xl sm:!text-3xl font-bold'>Privacy policy</p>
-                    <p className="!text-2xl sm:!text-3xl lg:!text-3xl font-bold">PRIVACY POLICY</p>
+                <p className="!text-2xl sm:!text-3xl lg:!text-3xl font-bold">Privacy Policy</p>
                 <div>
-                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base '>Updated on 1-7-2025</p>
+                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base '>Updated on 16-7-2025</p>
                 </div>
                 <div>
                     <h2 className="!text-xl sm:!text-2xl font-semibold">Who We Are</h2>
                     <p className='leading-6 sm:leading-7 !text-sm sm:!text-base'>
-                        (<span>&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;</span>) operates the website {import.meta.env.VITE_DOMAIN_NAME} (the &quot;Site&quot;). We are a company that provides various services and products. This Privacy Policy describes how we collect, use, disclose, and safeguard your personal information.
+                        {import.meta.env.VITE_COMPANY_NAME} (<span>&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;</span>) operates the website {import.meta.env.VITE_DOMAIN_NAME} (the &quot;Site&quot;). We are a company that provides various services and products. This Privacy Policy describes how we collect, use, disclose, and safeguard your personal information.
                     </p>
                 </div>
                 <div>
@@ -82,8 +81,9 @@ export default function PrivacyPolicyPage() {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="!text-xl sm:!text-2xl font-semibold">International Users</h2>
-                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base lg:!text-base'>Please note that we may transfer, store, and process your personal data outside the country where you live. Your personal data is also processed by staff and external service providers (third parties) and partners in these countries. If we transfer your personal data out of Europe, we will rely on recognized transfer mechanisms, such as the European Commission&apos;s Standard Contractual Clauses, or equivalent agreements from the relevant competent authority in the UK (if applicable) unless the data transfer is to a country deemed to ensure an adequate level of protection.</p>
+                    <h2 className="!text-xl sm:!text-2xl font-semibold">International users</h2>
+                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base lg:!text-base'>Please note that we may transfer, store, and process your personal data outside the country where you live. Your personal data is also processed by staff and external service providers (third parties) and partners in these countries.</p>
+                    <p className='leading-6 sm:leading-7 !text-sm sm:!text-base lg:!text-base'>If we transfer your personal data out of Europe, we will rely on recognized transfer mechanisms, such as the European Commission&apos;s Standard Contractual Clauses, or equivalent agreements from the relevant competent authority in the UK (if applicable) unless the data transfer is to a country deemed to ensure an adequate level of protection.</p>
                 </div>
                 <div>
                     <h2 className="!text-xl sm:!text-2xl font-semibold">Changes to This Privacy Policy</h2>

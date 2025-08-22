@@ -19,7 +19,7 @@ const sections = [
               order number, please contact us at{' '}
               <a
                 href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-                className="hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className="hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>{' '}
@@ -30,6 +30,7 @@ const sections = [
         ),
       },
       {
+        
         question: 'How can I cancel my order?',
         answer: (
           <div className="flex flex-col gap-4">
@@ -42,7 +43,7 @@ const sections = [
               service at{' '}
               <a
                 href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-                className="hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className="hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>{' '}
@@ -93,7 +94,7 @@ const sections = [
               free to contact our customer service at:{' '}
               <a
                 href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-                className="hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className="hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>
@@ -117,7 +118,7 @@ const sections = [
               at:{' '}
               <a
                 href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-                className="hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className="hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>
@@ -140,7 +141,7 @@ const sections = [
               contact our customer service at:{' '}
               <a
                 href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-                className="hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
+                className="hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>
@@ -174,26 +175,33 @@ const sections = [
       {
         question: "My tracking number isn't working",
         answer: (
-          <p>
-            Please allow up to 24 hours for your tracking number to update. If
-            it still doesn&apos;t work, contact us at{' '}
-            <a
-              href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-              className=" hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
-            >
-              {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
-            </a>
-            .
-          </p>
+          <div className="flex flex-col gap-4">
+            <p>
+              Your tracking number may not work immediately after you receive
+              the shipping confirmation email. It usually becomes active within
+              7 business days.
+            </p>
+            <p>
+              Don&apos;t worry—your order has been shipped and will be delivered
+              to your address.
+            </p>
+          </div>
         ),
       },
       {
         question: 'Is my information secure?',
         answer: (
-          <p>
-            Yes, we use industry-standard security measures to protect your
-            information.
-          </p>
+          <div className="flex flex-col gap-4">
+            <p>
+              Our website is fully secure and hosted on HTTPS servers, ensuring
+              the protection of your personal data.
+            </p>
+            <p>
+              We also work with trusted global leaders like VISA, Mastercard,
+              and American Express—companies that would never support a store
+              with high customer dissatisfaction rates.
+            </p>
+          </div>
         ),
       },
     ],
@@ -205,24 +213,21 @@ const sections = [
         question: 'Do you have a contact form?',
         answer: (
           <p>
-            Yes, you can contact us via our contact form on the website or by
-            emailing{' '}
-            <a
-              href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
-              className=" hover:text-blue-300 transition-colors !text-[var(--color-1)] underline underline-offset-4"
-            >
-              {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
-            </a>
-            .
+            Yes, absolutely! You can reach us anytime by using the contact form
+            located at the bottom of this page.
           </p>
         ),
       },
       {
         question: 'Can I contact you or reply via SMS?',
         answer: (
-          <p>
-            Currently, we only support email communication for customer service.
-          </p>
+          <div className="flex flex-col gap-4">
+            <p>
+              Unfortunately, no. If you have received an SMS from us, please
+              note that it is automated, and we will not receive your reply.
+            </p>
+            <p>Please contact us by email instead.</p>
+          </div>
         ),
       },
     ],
