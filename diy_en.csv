@@ -1,0 +1,9 @@
+title,description,handle,match_any,type,operator,value
+"All Products","Tous les produits disponibles","tous-les-produits","true","VARIANT_PRICE","GREATER_THAN","1"
+"DIY and Garden","Produits de bricolage et jardinage","bricolage-et-jardin","false","vendor","equals","Brico et Jardin"
+"Last Chance","Produits dernière chance","derniere-chance","false","VARIANT_PRICE","GREATER_THAN","25"
+"Home and Decor","Produits de décoration et maison","maison-et-deco","false","vendor","equals","Maison et Déco"
+"Flash Sale","Offres flash à durée limitée","offre-flash","true","VARIANT_PRICE","GREATER_THAN","44"
+"Flash Sale","Offres flash à durée limitée","offre-flash-01","true","VARIANT_PRICE","LESS_THAN","70"
+"Everything under 20€","Produits à moins de 20€","tout-a-moins-de-20","false","VARIANT_PRICE","LESS_THAN","21"
+"Tools","Produits d'outillage","outillage","false","vendor","equals","outillage" 
