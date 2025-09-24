@@ -58,7 +58,14 @@ const sections = [
               We offer a flexible return policy. If you’re not satisfied with
               your purchase, please contact us within 30 days of receiving your
               order to arrange a return or exchange. For more details, please
-              visit our Return Policy page.
+              visit our{' '}
+              <a
+                href="/returns"
+                className="transition-colors !text-white underline underline-offset-4"
+              >
+                Return Policy
+              </a>{' '}
+              page.
             </p>
           </div>
         ),
@@ -96,7 +103,7 @@ const sections = [
               You can reach us by visiting our Contact Us page here or by
               emailing us at{' '}
               <a
-                href="mailto:{import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}"
+                href={`mailto:${import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}`}
                 className=" hover:text-blue-300 transition-colors !text-[var(--color-footer)] underline underline-offset-4"
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
