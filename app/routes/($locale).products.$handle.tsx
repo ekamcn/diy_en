@@ -108,7 +108,6 @@ const sections = [
               >
                 {import.meta.env.VITE_CUSTOMER_SUPPORT_EMAIL}
               </a>
-              &#34;
             </p>
           </div>
         ),
